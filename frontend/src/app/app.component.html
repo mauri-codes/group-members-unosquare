@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="members-container">
+      <div class="title">
+        Members filter
+      </div>
+      <div class="inputText">
+          <input
+            [(ngModel)]="inputText"
+            (ngModelChange)="updateFilteredMembers()"
+            type="text" >
+      </div>
+      <div class="content">
+        <div class="member" *ngFor="let member of filteredMembers">
+          {{member.name}}
+        </div>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
